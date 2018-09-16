@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MyPipe} from './my.pipe';
+import {FormsModule} from '@angular/forms';
+import {MySuperpipe} from './my.superpipe';
 
 
 const routes: Routes = [
@@ -16,12 +19,15 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MyPipe,
+    MySuperpipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

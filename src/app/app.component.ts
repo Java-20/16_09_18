@@ -8,5 +8,8 @@ import {routerTransition} from './router.animation';
   animations:[routerTransition]
 })
 export class AppComponent {
+  value = '';
   title = 'app';
+
+  names = ['Vasya','Petya', 'Vova', 'Dima', 'Tanya', 'Tamir']
 }

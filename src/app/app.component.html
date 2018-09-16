@@ -2,6 +2,16 @@
   <a routerLink="/">Home</a>&nbsp;
   <a routerLink="/about">About</a>
 </nav>
+
+<p>{{title | uppercase}}</p>
+<p>{{25 | pow | number:'3.1-5'}}</p>
+<hr>
+<button (click)="names.push('Name Name')" >add</button>
+<hr>
+<input type="text" [(ngModel)] = "value">
+<ul>
+  <li *ngFor="let name of names | superpipe:value">{{name}}</li>
+</ul>
 <hr>
 <div [@routerInOut]="o.isActivated ?  o.activatedRoute : ''">
   <router-outlet #o="outlet"></router-outlet>
